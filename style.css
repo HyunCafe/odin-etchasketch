@@ -8,6 +8,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('assests/bg.jpg');
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    top: 1em;
+    font-size: 2.5em;
+    font-weight: bold;
 }
 /*  This is for 16 by 16
 .Main_Container {
@@ -33,6 +42,7 @@ body {
 .Main_Container {
     /* border:2px solid black; */
     margin-top: 7em;
+    margin-left: 20em;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-evenly;
@@ -52,5 +62,5 @@ body {
 }
 
 .square:hover {
-    background-color: blue;
+    background-color: green;
 }
