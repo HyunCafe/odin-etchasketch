@@ -9,10 +9,10 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+/*  This is for 16 by 16
 .Main_Container {
-    border:2px solid red;
-    margin-top: 1.3em;
+    border:2px solid black;
+    margin-top: 2em;
     display: flex;
     flex-wrap:wrap;
     justify-content: space-evenly;
@@ -27,4 +27,30 @@ body {
     align-self: center;
     width: 3.11em;
     height: 3.11em;
+} */
+
+/* Trying to make it for 50 by 50 now */
+.Main_Container {
+    /* border:2px solid black; */
+    margin-top: 7em;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 37.7em;
+    height: 37.87em;
+    padding: 0;
+}
+
+.square {
+    border: 1px solid black;
+    justify-content: space-evenly;
+    align-self: center;
+    width: .7546em;
+    height: .7013em;
+    padding:0;
+}
+
+.square:hover {
+    background-color: blue;
 }

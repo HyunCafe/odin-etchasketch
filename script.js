@@ -7,8 +7,8 @@ const container = document.createElement('div');
 container.classList.add('Main_Container');
 
 // Step 4: Create the 16x16 grid of square divs and append to container
-for (let i = 0; i < 16; i++) {
-    for (let j = 0; j < 16; j++) {
+for (let i = 0; i < 50; i++) {
+    for (let j = 0; j < 50; j++) {
         const squareDiv = document.createElement('div');
         squareDiv.classList.add('square');
         container.appendChild(squareDiv);
