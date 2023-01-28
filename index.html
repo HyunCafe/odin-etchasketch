@@ -7,21 +7,23 @@
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <h1>Etch-a-Sketch</h1>
-    <ul>
-      <li>
-        <button id="small_button" onclick="adjustSquare('small')">Small</button>
-      </li>
-      <li>
-        <button id="medium_button" onclick="adjustSquare('medium')">
-          Medium
-        </button>
-      </li>
-      <li>
-        <button id="large_button" onclick="adjustSquare('large')">Large</button>
-      </li>
+
+    <ul class="grid_button_container"><span>Grid Size</span>
+      <li><button id="small_button" onclick="adjustSquare('small')">Small</button></li>
+      <li><button id="medium_button" onclick="adjustSquare('medium')">Medium</button></li>
+      <li><button id="large_button" onclick="adjustSquare('large')">Large</button></li>
     </ul>
+
+    <ul class="color_button_container"><span>Color Options</span>
+        <li><button id="green_gradient" onclick="changeColor('green')">Green Gradient</button></li>
+        <li><button id="studio_ghilbi" onclick="changeColor('ghilbi')">Studio Ghilbi</button></li>
+        <li><button id="rainbow_gradient" onclick="changeColor('rainbow')">Rainbow Gradient</button></li>
+      </ul>
+
+      <button id="reset">Reset</button>
     <script src="script.js"></script>
   </body>
 </html>

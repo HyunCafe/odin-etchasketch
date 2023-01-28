@@ -110,13 +110,18 @@ function adjustSquare(size) {
     });
   });
 }
-
-
 // Reset Button
+document.getElementById("reset").addEventListener("click", function(){
+  const squares = document.querySelectorAll(".square");
+  squares.forEach(square => {
+    square.classList.remove("saved");
+  });
+});
+
 
 // Save button
 
-// Different Color Modes: Green Gradient, Inverse Color, Rainbow Gradient
+// Different Color Modes: Green Gradient, Studio Ghilbi, Rainbow Gradient
 
 // Add a Dark Mode toggle switch, which enables Party mode = Blue/Purple Gradient
 

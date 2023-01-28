@@ -46,6 +46,7 @@ h1 {
 ul {
   list-style: none;
   display: flex;
+  flex-direction: column;
 }
 
 button {
