@@ -15,6 +15,31 @@ body.appendChild(container);
 // Hover save over squares saves picture
 
 // Grid Options: Small, Medium, Large 
+const smallButton = document.getElementById("small_button");
+const mediumButton = document.getElementById("medium_button");
+const largeButton = document.getElementById("large_button");
+
+// Event Listener for Button Click that change on user choice / reset old grid
+smallButton.addEventListener("click", function(){
+    removeExistingGrid();
+    createSmallGrid();
+  });
+  mediumButton.addEventListener("click", function(){
+    removeExistingGrid();
+    createMediumGrid();
+  });
+  largeButton.addEventListener("click", function(){
+    removeExistingGrid();
+    createLargeGrid();
+  });
+
+  function removeExistingGrid(){
+    const squareElements = document.getElementsByClassName("square");
+    while(squareElements.length > 0){
+        squareElements[0].parentNode.removeChild(squareElements[0]);
+    }
+}
+
 
 // Small 16x16
 function createSmallGrid() {
