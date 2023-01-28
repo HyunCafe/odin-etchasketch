@@ -15,40 +15,39 @@ body.appendChild(container);
 // Hover save over squares saves picture
 
 // Default size when page loads for grid
-document.addEventListener("DOMContentLoaded", function(){
-    createSmallGrid();
-    adjustSquare("small");
+document.addEventListener("DOMContentLoaded", function () {
+  createSmallGrid();
+  adjustSquare("small");
 });
 
-// Grid Options: Small, Medium, Large 
+// Grid Options: Small, Medium, Large
 const smallButton = document.getElementById("small_button");
 const mediumButton = document.getElementById("medium_button");
 const largeButton = document.getElementById("large_button");
 
 // Event Listener for Button Click that change on user choice / reset old grid
-smallButton.addEventListener("click", function(){
-    removeExistingGrid();
-    createSmallGrid();
-    adjustSquare("small");
-  });
-  mediumButton.addEventListener("click", function(){
-    removeExistingGrid();
-    createMediumGrid();
-    adjustSquare("medium");
-  });
-  largeButton.addEventListener("click", function(){
-    removeExistingGrid();
-    createLargeGrid();
-    adjustSquare("large");
-  });
+smallButton.addEventListener("click", function () {
+  removeExistingGrid();
+  createSmallGrid();
+  adjustSquare("small");
+});
+mediumButton.addEventListener("click", function () {
+  removeExistingGrid();
+  createMediumGrid();
+  adjustSquare("medium");
+});
+largeButton.addEventListener("click", function () {
+  removeExistingGrid();
+  createLargeGrid();
+  adjustSquare("large");
+});
 
-  function removeExistingGrid(){
-    const squareElements = document.getElementsByClassName("square");
-    while(squareElements.length > 0){
-        squareElements[0].parentNode.removeChild(squareElements[0]);
-    }
+function removeExistingGrid() {
+  const squareElements = document.getElementsByClassName("square");
+  while (squareElements.length > 0) {
+    squareElements[0].parentNode.removeChild(squareElements[0]);
+  }
 }
-
 
 // Function for Small 16x16
 function createSmallGrid() {
@@ -72,7 +71,7 @@ function createMediumGrid() {
   }
 }
 
-// Function for Large 50x50 
+// Function for Large 50x50
 function createLargeGrid() {
   for (let i = 0; i < 50; i++) {
     for (let j = 0; j < 50; j++) {
@@ -85,27 +84,33 @@ function createLargeGrid() {
 
 // Function for square size change based on above choices
 function adjustSquare(size) {
-    const squares = document.querySelectorAll(".square");
-    let squareWidth, squareHeight;
-    
-    if (size === "small") {
+  let squareWidth, squareHeight;
+
+  switch (size) {
+    case "small":
       squareWidth = "6.25%";
       squareHeight = "6.25%";
-    } else if (size === "medium") {
+      break;
+    case "medium":
       squareWidth = "3.333%";
       squareHeight = "3.333%";
-    } else {
+      break;
+    case "large":
       squareWidth = "2%";
       squareHeight = "2%";
-    }
-  
-
-    squares.forEach(square => {
-      square.style.width = squareWidth;
-      square.style.height = squareHeight;
-    });
+      break;
   }
-  
+
+  document.querySelectorAll(".square").forEach((square) => {
+    square.style.width = squareWidth;
+    square.style.height = squareHeight;
+// Function Save over hover for the picture creation
+    square.addEventListener("mouseover", function() {
+      square.classList.add("saved");
+    });
+  });
+}
+
 
 // Reset Button
 
