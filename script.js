@@ -14,6 +14,12 @@ body.appendChild(container);
 // Things to Add:
 // Hover save over squares saves picture
 
+// Default size when page loads for grid
+document.addEventListener("DOMContentLoaded", function(){
+    createSmallGrid();
+    adjustSquare("small");
+});
+
 // Grid Options: Small, Medium, Large 
 const smallButton = document.getElementById("small_button");
 const mediumButton = document.getElementById("medium_button");
@@ -23,14 +29,17 @@ const largeButton = document.getElementById("large_button");
 smallButton.addEventListener("click", function(){
     removeExistingGrid();
     createSmallGrid();
+    adjustSquare("small");
   });
   mediumButton.addEventListener("click", function(){
     removeExistingGrid();
     createMediumGrid();
+    adjustSquare("medium");
   });
   largeButton.addEventListener("click", function(){
     removeExistingGrid();
     createLargeGrid();
+    adjustSquare("large");
   });
 
   function removeExistingGrid(){
@@ -41,7 +50,7 @@ smallButton.addEventListener("click", function(){
 }
 
 
-// Small 16x16
+// Function for Small 16x16
 function createSmallGrid() {
   for (let i = 0; i < 16; i++) {
     for (let j = 0; j < 16; j++) {
@@ -52,7 +61,7 @@ function createSmallGrid() {
   }
 }
 
-// Medium 30x30
+// Function for Medium 30x30
 function createMediumGrid() {
   for (let i = 0; i < 30; i++) {
     for (let j = 0; j < 30; j++) {
@@ -63,7 +72,7 @@ function createMediumGrid() {
   }
 }
 
-// Large 50x50 
+// Function for Large 50x50 
 function createLargeGrid() {
   for (let i = 0; i < 50; i++) {
     for (let j = 0; j < 50; j++) {
@@ -73,6 +82,30 @@ function createLargeGrid() {
     }
   }
 }
+
+// Function for square size change based on above choices
+function adjustSquare(size) {
+    const squares = document.querySelectorAll(".square");
+    let squareWidth, squareHeight;
+    
+    if (size === "small") {
+      squareWidth = "6.25%";
+      squareHeight = "6.25%";
+    } else if (size === "medium") {
+      squareWidth = "3.333%";
+      squareHeight = "3.333%";
+    } else {
+      squareWidth = "2%";
+      squareHeight = "2%";
+    }
+  
+
+    squares.forEach(square => {
+      square.style.width = squareWidth;
+      square.style.height = squareHeight;
+    });
+  }
+  
 
 // Reset Button
 
