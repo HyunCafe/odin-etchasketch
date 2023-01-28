@@ -110,14 +110,6 @@ function adjustSquare(size) {
   });
 }
 
-// Reset Button
-document.getElementById("reset").addEventListener("click", function () {
-  const squares = document.querySelectorAll(".square");
-  squares.forEach(square => {
-    square.classList.remove("saved");
-  });
-});
-
 // Different Color Modes: Green Gradient, Studio Ghilbi, Blue Gradient
 const greenColors = ["#C5E8B7", "#ABE098", "#83D475", "#57C84D", "#2EB62C"];
 const ghilbiColors = ["#e2dd3f", "#74cc66", "#046684", "#a06468", "#d4b5a9", "#2e4744"];
@@ -163,6 +155,15 @@ function changeMode(mode) {
       break;
   }
 }
+
+// Reset Button
+document.getElementById("reset").addEventListener("click", function () {
+  const squares = document.querySelectorAll(".square");
+  squares.forEach(square => {
+    square.classList.remove("saved");
+    square.style.backgroundColor = '#fafafa';
+  });
+});
 // Make option for on mouse hold or on hover for coloring
 
 // Make an eraser mode
