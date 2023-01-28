@@ -12,6 +12,7 @@ container.classList.add("Main_Container");
 body.appendChild(container);
 
 // Things to Add:
+
 // Hover save over squares saves picture
 
 // Default size when page loads for grid
@@ -19,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
   createSmallGrid();
   adjustSquare("small");
 });
-
 // Grid Options: Small, Medium, Large
 const smallButton = document.getElementById("small_button");
 const mediumButton = document.getElementById("medium_button");
@@ -41,7 +41,6 @@ largeButton.addEventListener("click", function () {
   createLargeGrid();
   adjustSquare("large");
 });
-
 function removeExistingGrid() {
   const squareElements = document.getElementsByClassName("square");
   while (squareElements.length > 0) {
@@ -104,24 +103,69 @@ function adjustSquare(size) {
   document.querySelectorAll(".square").forEach((square) => {
     square.style.width = squareWidth;
     square.style.height = squareHeight;
-// Function Save over hover for the picture creation
-    square.addEventListener("mouseover", function() {
+    // Function Save over hover for the picture creation
+    square.addEventListener("mouseover", function () {
       square.classList.add("saved");
     });
   });
 }
+
 // Reset Button
-document.getElementById("reset").addEventListener("click", function(){
+document.getElementById("reset").addEventListener("click", function () {
   const squares = document.querySelectorAll(".square");
   squares.forEach(square => {
     square.classList.remove("saved");
   });
 });
 
+// Different Color Modes: Green Gradient, Studio Ghilbi, Blue Gradient
+const greenColors = ["#C5E8B7", "#ABE098", "#83D475", "#57C84D", "#2EB62C"];
+const ghilbiColors = ["#e2dd3f", "#74cc66", "#046684", "#a06468", "#d4b5a9", "#2e4744"];
+const blueColors = ["#aa00ff", "#9600ff", "#6f00ff", "#5512fb", "#3c00ff"];
 
-// Save button
+function changeColor(color) {
+  document.querySelectorAll('.square').forEach(element => {
+    element.addEventListener('mouseover', () => {
+      switch (color) {
+        case "green":
+          element.style.backgroundColor = greenColors[Math.floor(Math.random() * greenColors.length)];
+          break;
+        case "ghilbi":
+          element.style.backgroundColor = ghilbiColors[Math.floor(Math.random() * ghilbiColors.length)];
+          break;
+        case "blue":
+          element.style.backgroundColor = blueColors[Math.floor(Math.random() * blueColors.length)];
+          break;
+      }
+    });
 
-// Different Color Modes: Green Gradient, Studio Ghilbi, Rainbow Gradient
+    element.addEventListener('mouseout', () => {
+      element.style.backgroundColor = element.dataset.savedColor;
+    });
+
+    element.addEventListener('mouseover', () => {
+      element.dataset.savedColor = element.style.backgroundColor;
+    });
+  });
+}
+
+// Updates mode variable when a color button is clicked
+function changeMode(mode) {
+  switch (mode) {
+    case "green":
+      currentMode = "green";
+      break;
+    case "ghilbi":
+      currentMode = "ghilbi";
+      break;
+    case "blue":
+      currentMode = "blue";
+      break;
+  }
+}
+// Make option for on mouse hold or on hover for coloring
+
+// Make an eraser mode
 
 // Add a Dark Mode toggle switch, which enables Party mode = Blue/Purple Gradient
 
