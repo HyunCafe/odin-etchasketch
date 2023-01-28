@@ -16,26 +16,57 @@ h1 {
   text-align: center;
   top: 1em;
   font-size: 2.5em;
+  margin: 0 auto;
+  position:fixed;
   font-weight: bold;
 }
 
 .Main_Container {
+    margin-top: 7em;
+    margin-left: 30em;
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+
+    /* this is for the 50x50
   margin-top: 7em;
-  margin-left: 20em;
+  margin-left: 30em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 37.7em;
-  height: 37.87em;
+  height: 37.87em; */
 }
 
 .square {
+    width: 10%;
+    height: 10%;
+    border: 1px solid black;
+    /* this is for the 50x50
   border: 0.5px solid black;
   opacity: 0.6;
   width: 0.75em;
-  height: 0.76em;
+  height: 0.76em; */
 }
 
 .square:hover {
   background-color: green;
 }
+
+
+
+/* Responsive add Media Queries need Testing */
+@media (min-width: 768px) {
+    .square {
+      width: 6.6%;
+      height: 6.6%;
+    }
+  }
+  @media (min-width: 1024px) {
+    .square {
+      width: 4%;
+      height: 4%;
+    }
+  }
+  
