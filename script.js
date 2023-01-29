@@ -4,16 +4,8 @@ const body = document.body;
 
 // Create a new <div> element
 const container = document.createElement("div");
-
-// Add a class to the new <div> element
 container.classList.add("Main_Container");
-
-// Append the new <div> element to the container
 body.appendChild(container);
-
-// Things to Add:
-
-// Hover save over squares saves picture
 
 // Default size when page loads for grid
 document.addEventListener("DOMContentLoaded", function () {
@@ -99,6 +91,7 @@ function adjustSquare(size) {
       squareHeight = "2%";
       break;
   }
+  // Maybe add custom grid 1-100
 
   document.querySelectorAll(".square").forEach((square) => {
     square.style.width = squareWidth;
@@ -166,7 +159,7 @@ function changeMode(mode) {
   }
 }
 
-// Reset Button
+// Reset Button during Light mode
 document.getElementById("reset").addEventListener("click", function () {
   const squares = document.querySelectorAll(".square");
   squares.forEach((square) => {
@@ -174,6 +167,15 @@ document.getElementById("reset").addEventListener("click", function () {
     square.style.backgroundColor = "#fafafa";
   });
 });
+
+// Add condition to handle reset in dark mode
+const squares = document.querySelectorAll(".square");
+squares.forEach((square) => {
+  square.addEventListener("mouseover", function () {
+    square.classList.add("saved");
+  });
+});
+
 // Make option for on mouse hold or on hover for coloring
 
 // Make an eraser mode
