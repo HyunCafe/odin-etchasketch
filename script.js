@@ -173,19 +173,17 @@ function toggleMode() {
   const body = document.querySelector("body");
   body.classList.toggle("light-mode");
   body.classList.toggle("dark-mode");
-}
-
 // Feature change background image with toggle click
-const toggleButton = document.getElementById("toggle_btn");
-const body = document.body;
-
-toggleButton.addEventListener("click", function() {
-  if (toggleButton.checked) {
-    body.style.backgroundImage = "url('assests/bg.jpg')";
-  } else {
-    body.style.backgroundImage = "url('assests/bgjpg')";
-  }
-});
+if (body.classList.contains("dark-mode")) {
+  body.style.backgroundImage = "url('assets/bgDarkMode.jpg')";
+  body.style.backgroundPosition = "center";
+  body.style.backgroundSize = "cover";
+} else {
+body.style.backgroundImage = "url('assets/bg.jpg')";
+body.style.backgroundPosition = "center";
+body.style.backgroundSize = "cover";
+}
+}
 
 // Counter showing how many squares were highlighted
 
