@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body>
+  <body id="body" class="light-mode">
     <h1>Etch-a-Sketch</h1>
 
     <ul class="grid_button_container">
@@ -17,9 +17,7 @@
         <button id="small_button" onclick="adjustSquare('small')">Small</button>
       </li>
       <li>
-        <button id="medium_button" onclick="adjustSquare('medium')">
-          Medium
-        </button>
+        <button id="medium_button" onclick="adjustSquare('medium')">Medium</button>
       </li>
       <li>
         <button id="large_button" onclick="adjustSquare('large')">Large</button>
@@ -29,23 +27,18 @@
     <ul class="color_button_container">
       <span>Color Options</span>
       <li>
-        <button id="green_gradient" onclick="changeColor('green')">
-          Green Gradient
-        </button>
+        <button id="green_gradient" onclick="changeColor('green')">Green Gradient</button>
       </li>
       <li>
-        <button id="studio_ghilbi" onclick="changeColor('ghilbi')">
-          Studio Ghilbi
-        </button>
+        <button id="studio_ghilbi" onclick="changeColor('ghilbi')">Studio Ghilbi</button>
       </li>
       <li>
-        <button id="blue_gradient" onclick="changeColor('blue')">
-          Blue Gradient
-        </button>
+        <button id="blue_gradient" onclick="changeColor('blue')">Blue Gradient</button>
       </li>
     </ul>
 
     <button id="reset">Reset</button>
+    <button id="toggle_btn" onclick="toggleMode()">Toggle Mode</button>
     <script src="script.js"></script>
   </body>
 </html>

@@ -169,6 +169,23 @@ document.getElementById("reset").addEventListener("click", function () {
 // Make an eraser mode
 
 // Add a Dark Mode toggle switch, which enables Party mode = Blue/Purple Gradient
+function toggleMode() {
+  const body = document.querySelector("body");
+  body.classList.toggle("light-mode");
+  body.classList.toggle("dark-mode");
+}
+
+// Feature change background image with toggle click
+const toggleButton = document.getElementById("toggle_btn");
+const body = document.body;
+
+toggleButton.addEventListener("click", function() {
+  if (toggleButton.checked) {
+    body.style.backgroundImage = "url('assests/bg.jpg')";
+  } else {
+    body.style.backgroundImage = "url('assests/bgjpg')";
+  }
+});
 
 // Counter showing how many squares were highlighted
 
