@@ -22,7 +22,7 @@ Created README.md file
 
 #### Jan 28, 2023
 
-* Added different grid choices and ideas.
+* Added different grid choices and ideas 16x16, 30x30, and 50x50
 * Added feature buttons and reset logic choice.
 * Changed the unit of measurement for squares from em to % for squares to fit perfectly with the border.
 * Added save over hover and refactored the if statement to switch statement.
