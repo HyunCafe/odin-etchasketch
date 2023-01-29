@@ -112,30 +112,40 @@ function adjustSquare(size) {
 
 // Different Color Modes: Green Gradient, Studio Ghilbi, Blue Gradient
 const greenColors = ["#C5E8B7", "#ABE098", "#83D475", "#57C84D", "#2EB62C"];
-const ghilbiColors = ["#e2dd3f", "#74cc66", "#046684", "#a06468", "#d4b5a9", "#2e4744"];
+const ghilbiColors = [
+  "#e2dd3f",
+  "#74cc66",
+  "#046684",
+  "#a06468",
+  "#d4b5a9",
+  "#2e4744",
+];
 const blueColors = ["#aa00ff", "#9600ff", "#6f00ff", "#5512fb", "#3c00ff"];
 
 function changeColor(color) {
-  document.querySelectorAll('.square').forEach(element => {
-    element.addEventListener('mouseover', () => {
+  document.querySelectorAll(".square").forEach((element) => {
+    element.addEventListener("mouseover", () => {
       switch (color) {
         case "green":
-          element.style.backgroundColor = greenColors[Math.floor(Math.random() * greenColors.length)];
+          element.style.backgroundColor =
+            greenColors[Math.floor(Math.random() * greenColors.length)];
           break;
         case "ghilbi":
-          element.style.backgroundColor = ghilbiColors[Math.floor(Math.random() * ghilbiColors.length)];
+          element.style.backgroundColor =
+            ghilbiColors[Math.floor(Math.random() * ghilbiColors.length)];
           break;
         case "blue":
-          element.style.backgroundColor = blueColors[Math.floor(Math.random() * blueColors.length)];
+          element.style.backgroundColor =
+            blueColors[Math.floor(Math.random() * blueColors.length)];
           break;
       }
     });
 
-    element.addEventListener('mouseout', () => {
+    element.addEventListener("mouseout", () => {
       element.style.backgroundColor = element.dataset.savedColor;
     });
 
-    element.addEventListener('mouseover', () => {
+    element.addEventListener("mouseover", () => {
       element.dataset.savedColor = element.style.backgroundColor;
     });
   });
@@ -159,9 +169,9 @@ function changeMode(mode) {
 // Reset Button
 document.getElementById("reset").addEventListener("click", function () {
   const squares = document.querySelectorAll(".square");
-  squares.forEach(square => {
+  squares.forEach((square) => {
     square.classList.remove("saved");
-    square.style.backgroundColor = '#fafafa';
+    square.style.backgroundColor = "#fafafa";
   });
 });
 // Make option for on mouse hold or on hover for coloring
@@ -173,16 +183,16 @@ function toggleMode() {
   const body = document.querySelector("body");
   body.classList.toggle("light-mode");
   body.classList.toggle("dark-mode");
-// Feature change background image with toggle click
-if (body.classList.contains("dark-mode")) {
-  body.style.backgroundImage = "url('assets/bgDarkMode.jpg')";
-  body.style.backgroundPosition = "center";
-  body.style.backgroundSize = "cover";
-} else {
-body.style.backgroundImage = "url('assets/bg.jpg')";
-body.style.backgroundPosition = "center";
-body.style.backgroundSize = "cover";
-}
+  // Feature change background image with toggle click
+  if (body.classList.contains("dark-mode")) {
+    body.style.backgroundImage = "url('assets/bgDarkMode.jpg')";
+    body.style.backgroundPosition = "center";
+    body.style.backgroundSize = "cover";
+  } else {
+    body.style.backgroundImage = "url('assets/bg.jpg')";
+    body.style.backgroundPosition = "center";
+    body.style.backgroundSize = "cover";
+  }
 }
 
 // Counter showing how many squares were highlighted
