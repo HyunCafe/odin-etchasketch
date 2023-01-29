@@ -3,21 +3,40 @@ etch a sketch proj from scratch to practice DOM mainpulation
 
  Will fix this readme later, saving info for now
 
-General Timeline
-Started the project by creating a README.md file.
-Added 16x16 grid divs and fixed the grid layout.
-Aligned divs flush and changed the grid layout to 50x50.
-Added a background to the project.
-Made the borders flush for squares.
-Added different grid choices and ideas.
-Added feature buttons and reset logic choice.
-Changed "em" to "%" for squares to fit perfectly with the border.
-Added a save feature over hover and refactored "if" to "switch".
-Added a reset button and color buttons.
-Added color gradients, but there is a bug with the reset feature.
-Fixed the bug with the reset not applying to color gradients.
-Added click event for player choice.
-Implemented logic to determine the winner and display the result to HTML.
+## Project Timeline
 
-Working on a light and Dark mode
-using adobe photoshop to change the BG to a dark mode and want to apply it so the BG changes with the toggle
+#### Jan 26, 2023
+
+
+* Started the project
+Created README.md file
+
+#### Jan 27, 2023
+
+* Added a 16x16 grid divs to the project.
+* Fixed the 16x16 grid.
+* Aligned the divs flush
+* Changed the grid size from 16x16 to 50x50.
+* Added a background.
+* Made borders flush for squares.
+
+#### Jan 28, 2023
+
+* Added different grid choices and ideas.
+* Added feature buttons and reset logic choice.
+* Changed the unit of measurement for squares from em to % for squares to fit perfectly with the border.
+* Added save over hover and refactored the if statement to switch statement.
+* Added a reset button and color buttons.
+* Added color gradients, but there was a bug with the reset button.
+* Updated the README.md file.
+* Fixed the bug with reset not applying to color gradients.
+* Added Photoshop background to the dark mode option.
+* Worked on the background image feature for toggle.
+* Added the feature to change the background image on toggle.
+* Refactored the code and made semantic corrections using the HTML validator.
+* Used a CSS validator to ensure all errors were corrected, formatted files with Prettier.
+
+### To Do
+Still much to do
+
+Note: Commits were made by @HyunCafe and timestamps were provided in the original prompt to indicate the progression of the project over time.
