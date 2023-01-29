@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   createSmallGrid();
   adjustSquare("small");
 });
+
 // Grid Options: Small, Medium, Large
 const smallButton = document.getElementById("small_button");
 const mediumButton = document.getElementById("medium_button");
@@ -99,12 +100,20 @@ function adjustSquare(size) {
     // Function Save over hover for the picture creation
     square.addEventListener("mouseover", function () {
       square.classList.add("saved");
+      savedSquares.push(square);
     });
   });
 }
 
 // Different Color Modes: Green Gradient, Studio Ghilbi, Blue Gradient
-const greenColors = ["#C5E8B7", "#ABE098", "#83D475", "#57C84D", "#2EB62C"];
+const greenColors = [
+  "#C5E8B7",
+  "#ABE098",
+  "#83D475",
+  "#57C84D",
+  "#2EB62C",
+  "#d5eeca",
+];
 const ghilbiColors = [
   "#e2dd3f",
   "#74cc66",
@@ -113,7 +122,14 @@ const ghilbiColors = [
   "#d4b5a9",
   "#2e4744",
 ];
-const blueColors = ["#aa00ff", "#9600ff", "#6f00ff", "#5512fb", "#3c00ff"];
+const blueColors = [
+  "#aa00ff",
+  "#9600ff",
+  "#6f00ff",
+  "#5512fb",
+  "#3c00ff",
+  "#7700b3",
+];
 
 function changeColor(color) {
   document.querySelectorAll(".square").forEach((element) => {
@@ -159,23 +175,6 @@ function changeMode(mode) {
   }
 }
 
-// Reset Button during Light mode
-document.getElementById("reset").addEventListener("click", function () {
-  const squares = document.querySelectorAll(".square");
-  squares.forEach((square) => {
-    square.classList.remove("saved");
-    square.style.backgroundColor = "#fafafa";
-  });
-});
-
-// Add condition to handle reset in dark mode
-const squares = document.querySelectorAll(".square");
-squares.forEach((square) => {
-  square.addEventListener("mouseover", function () {
-    square.classList.add("saved");
-  });
-});
-
 // Make option for on mouse hold or on hover for coloring
 
 // Make an eraser mode
@@ -185,6 +184,7 @@ function toggleMode() {
   const body = document.querySelector("body");
   body.classList.toggle("light-mode");
   body.classList.toggle("dark-mode");
+
   // Feature change background image with toggle click
   if (body.classList.contains("dark-mode")) {
     body.style.backgroundImage = "url('assets/bgDarkMode.jpg')";
@@ -195,7 +195,32 @@ function toggleMode() {
     body.style.backgroundPosition = "center";
     body.style.backgroundSize = "cover";
   }
+  // Add event listener to save over hover when in dark mode
+  document.querySelectorAll(".square").forEach((square) => {
+    square.addEventListener("mouseover", function () {
+      if (body.classList.contains("dark-mode")) {
+        square.classList.add("saved");
+      }
+    });
+  });
 }
+
+// Reset Button
+function reset() {
+  // Clear the array of saved squares
+  savedSquares.forEach((square) => {
+    square.classList.remove("saved");
+    square.style.backgroundColor = "#fafafa";
+  });
+  savedSquares = [];
+}
+
+document.getElementById("reset").addEventListener("click", function () {
+  document.querySelectorAll(".square").forEach((square) => {
+    square.classList.remove("saved");
+    square.style.backgroundColor = "#fafafa";
+  });
+});
 
 // Counter showing how many squares were highlighted
 

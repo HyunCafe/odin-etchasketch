@@ -36,10 +36,6 @@ h1 {
   opacity: 0.6;
 }
 
-.saved {
-  background-color: green;
-}
-
 ul {
   list-style: none;
   display: flex;
@@ -98,7 +94,7 @@ button {
 }
 
 .light-mode .saved {
-  background: #ccc;
+  background: #8d8c8c;
 }
 
 /* Responsive add Media Queries need Testing */
