@@ -111,12 +111,12 @@ button:active {
 }
 
 .dark-mode .Main_Container {
-  background: #111;
+  background: #fafafa;
   border: 1px solid #ccc;
 }
 
 .dark-mode .square {
-  background: #444;
+  background: #fafafa;
   border: 1px solid #ccc;
   opacity: 1;
 }
