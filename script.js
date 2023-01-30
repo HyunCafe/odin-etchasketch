@@ -226,6 +226,9 @@ function reset() {
 
 // Add event listener to reset button to reset the saved squares
 document.getElementById("reset").addEventListener("click", reset);
+
+// Button Effect on Active Click
+
 // Counter showing how many squares were highlighted
 
 // Make it responsive
