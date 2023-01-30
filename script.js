@@ -24,17 +24,23 @@ smallButton.addEventListener("click", function () {
   removeExistingGrid();
   createSmallGrid();
   adjustSquare("small");
+  changeColor(currentColor);
 });
+
 mediumButton.addEventListener("click", function () {
   removeExistingGrid();
   createMediumGrid();
   adjustSquare("medium");
+  changeColor(currentColor);
 });
+
 largeButton.addEventListener("click", function () {
   removeExistingGrid();
   createLargeGrid();
   adjustSquare("large");
+  changeColor(currentColor);
 });
+
 function removeExistingGrid() {
   const squareElements = document.getElementsByClassName("square");
   while (squareElements.length > 0) {
@@ -133,10 +139,13 @@ const blueColors = [
   "#7700b3",
 ];
 
+let currentColor = "green";
+
 function changeColor(color) {
+  currentColor = color;
   document.querySelectorAll(".square").forEach((element) => {
     element.addEventListener("mouseover", () => {
-      switch (color) {
+      switch (currentColor) {
         case "green":
           element.style.backgroundColor =
             greenColors[Math.floor(Math.random() * greenColors.length)];
