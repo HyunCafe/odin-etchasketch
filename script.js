@@ -188,8 +188,6 @@ function changeMode(mode) {
   }
 }
 
-// Make option for on mouse hold or on hover for coloring
-
 // Make an eraser mode
 
 // Add a Dark Mode toggle switch, which enables Party mode = Blue/Purple Gradient
