@@ -35,6 +35,18 @@ Created README.md file
 * Added the feature to change the background image on toggle.
 * Refactored the code and made semantic corrections using the HTML validator.
 * Used a CSS validator to ensure all errors were corrected, formatted files with Prettier.
+* Made improvements to the clarity of project steps to enhance user experience.
+
+#### Jan 29, 2023
+* Fix: Fixed bug regarding color bg reset on dark mode, addressed and resolved the issue.
+* Bug: Found bug, dark mode, square grid on selection bg color changes.
+* Fix: Fixed the bug.
+* Bug: Found another bug, grid select before color, default color doesn't apply.
+* Fix: Fixed bug of reset default being too dark on BG squares.
+* Add: Added some style and flex to buttons for enhanced user experience.
+* Fix: Fixed another bug with saved square on reset for color, resolved.
+* Bug: Found bug in reset dark mode, squares don't save, another bug!
+* Fix: Fixed the bug.
 
 ### To Do
 Still much to do
