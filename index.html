@@ -10,48 +10,52 @@
 
   <body id="body" class="light-mode">
     <h1>Etch-a-Sketch</h1>
-    <fieldset>
-      <legend>Grid Size</legend>
-      <ul class="grid_button_container">
-        <li>
-          <button id="small_button" onclick="adjustSquare('small')">
-            Small
-          </button>
-        </li>
-        <li>
-          <button id="medium_button" onclick="adjustSquare('medium')">
-            Medium
-          </button>
-        </li>
-        <li>
-          <button id="large_button" onclick="adjustSquare('large')">
-            Large
-          </button>
-        </li>
-      </ul>
-    </fieldset>
-    <fieldset>
-      <legend>Color Options</legend>
-      <ul class="color_button_container">
-        <li>
-          <button id="green_gradient" onclick="changeColor('green')">
-            Green Gradient
-          </button>
-        </li>
-        <li>
-          <button id="studio_ghilbi" onclick="changeColor('ghilbi')">
-            Studio Ghilbi
-          </button>
-        </li>
-        <li>
-          <button id="blue_gradient" onclick="changeColor('blue')">
-            Blue Gradient
-          </button>
-        </li>
-      </ul>
-    </fieldset>
-    <button id="reset">Reset</button>
-    <button id="toggle_btn" onclick="toggleMode()">Toggle Mode</button>
+
+    <div class="options_container">
+      <fieldset>
+        <legend>Grid Size</legend>
+        <ul class="grid_button_container">
+          <li>
+            <button id="small_button" onclick="adjustSquare('small')">
+              Small
+            </button>
+          </li>
+          <li>
+            <button id="medium_button" onclick="adjustSquare('medium')">
+              Medium
+            </button>
+          </li>
+          <li>
+            <button id="large_button" onclick="adjustSquare('large')">
+              Large
+            </button>
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>Color Options</legend>
+        <ul class="color_button_container">
+          <li>
+            <button id="green_gradient" onclick="changeColor('green')">
+              Green Gradient
+            </button>
+          </li>
+          <li>
+            <button id="studio_ghilbi" onclick="changeColor('ghilbi')">
+              Studio Ghilbi
+            </button>
+          </li>
+          <li>
+            <button id="blue_gradient" onclick="changeColor('blue')">
+              Blue Gradient
+            </button>
+          </li>
+        </ul>
+      </fieldset>
+      <button id="toggle_btn" onclick="toggleMode()">Dark Mode</button>
+      <button id="reset">Reset</button>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

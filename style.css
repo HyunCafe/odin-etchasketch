@@ -19,12 +19,17 @@ h1 {
   font-size: 2.5em;
   margin: 0 auto;
   position: fixed;
-  font-weight: bold;
+  font-weight: 900;
+  text-shadow: 0.1rem 0.1rem 0.3rem #2eb62c;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  border-radius: 1rem;
+  border-color: transparent;
 }
 
 .Main_Container {
   margin-top: 7em;
-  margin-left: 30em;
+  margin-left: 5em;
   display: flex;
   flex-wrap: wrap;
   width: 38em;
@@ -42,9 +47,45 @@ ul {
   flex-direction: column;
 }
 
+.options_container {
+  margin-top: 14em;
+  margin-left: 28em;
+}
+
+fieldset {
+  border-radius: 1rem;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+legend {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  text-shadow: 0.1rem 0.1rem 0.3rem #2eb62c;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+}
+
+li {
+  display: flex;
+  justify-content: center;
+  margin: 0.3em;
+}
+
 button {
   padding: 0.25em;
   margin: 0.5em;
+  font-size: 1rem;
+  font-weight: 900;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  border-radius: 1rem;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  backdrop-filter: blur(22px);
+  background-color: rgba(255, 255, 255, 1);
+  text-shadow: 0.2rem 0.1rem 0.3rem #2eb62c;
 }
 
 /* Dark Mode */
