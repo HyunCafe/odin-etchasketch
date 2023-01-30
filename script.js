@@ -10,6 +10,7 @@ body.appendChild(container);
 // Default size when page loads for grid
 document.addEventListener("DOMContentLoaded", function () {
   createSmallGrid();
+  changeColor("greenDefault");
   adjustSquare("small");
 });
 
@@ -106,6 +107,7 @@ function adjustSquare(size) {
 }
 
 // Different Color Modes: Green Gradient, Studio Ghilbi, Blue Gradient
+const greenDefault = "#57C84D";
 const greenColors = [
   "#C5E8B7",
   "#ABE098",
@@ -147,6 +149,8 @@ function changeColor(color) {
           element.style.backgroundColor =
             blueColors[Math.floor(Math.random() * blueColors.length)];
           break;
+        default:
+          element.style.backgroundColor = greenDefault;
       }
     });
 
@@ -207,21 +211,14 @@ function toggleMode() {
 
 // Reset Button
 function reset() {
-  // Clear the array of saved squares
-  savedSquares.forEach((square) => {
-    square.classList.remove("saved");
-    square.style.backgroundColor = "#fafafa";
-  });
-  savedSquares = [];
-}
-
-document.getElementById("reset").addEventListener("click", function () {
   document.querySelectorAll(".square").forEach((square) => {
     square.classList.remove("saved");
     square.style.backgroundColor = "#fafafa";
   });
-});
+}
 
+// Add event listener to reset button to reset the saved squares
+document.getElementById("reset").addEventListener("click", reset);
 // Counter showing how many squares were highlighted
 
 // Make it responsive
