@@ -113,6 +113,7 @@ function adjustSquare(size) {
 }
 
 // Different Color Modes: Green Gradient, Studio Ghilbi, Blue Gradient
+const eraser = "#fafafa";
 const greenDefault = "#57C84D";
 const greenColors = [
   "#C5E8B7",
@@ -158,6 +159,10 @@ function changeColor(color) {
           element.style.backgroundColor =
             blueColors[Math.floor(Math.random() * blueColors.length)];
           break;
+        //  Eraser mode
+        case "eraser":
+          element.style.backgroundColor = eraser;
+          break;
         default:
           element.style.backgroundColor = greenDefault;
       }
@@ -187,8 +192,6 @@ function changeMode(mode) {
       break;
   }
 }
-
-// Make an eraser mode
 
 // Add a Dark Mode toggle switch, which enables Party mode = Blue/Purple Gradient
 function toggleMode() {
