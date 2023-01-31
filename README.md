@@ -51,7 +51,7 @@ Created README.md file
 #### Jan 30, 2023
 ### To Do
 * Add: Added feature Eraser mode (simply added the feature as another color option that matched default BG color)
-
+* Add: Added feature Counter (Many bugs arose while implmenting this feature, though easy in concept, hard in execution)
 
 Still much to do
 
