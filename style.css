@@ -29,7 +29,8 @@ h1 {
 
 .Main_Container {
   margin-top: 7em;
-  margin-left: 5em;
+  margin-left: 1.5em;
+  margin-right: 7em;
   display: flex;
   flex-wrap: wrap;
   width: 38em;
@@ -48,8 +49,31 @@ ul {
 }
 
 .options_container {
-  margin-top: 14em;
-  margin-left: 28em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  margin-top: 8em;
+  margin-left: 30em;
+}
+h3 {
+    font-size: 1.4em;
+    font-weight: 900;
+    text-shadow: 0.1rem 0.1rem .1rem #2eb62c;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+}
+
+#counter {
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 1rem;
+    opacity: 0.9;
+    font-weight: 900;
+    text-shadow: 0.1rem 0.1rem .1rem #2eb62c;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    font-size: 1.5rem;
+    padding: .2em
+
 }
 
 fieldset {

@@ -140,7 +140,7 @@ const blueColors = [
   "#7700b3",
 ];
 
-let currentColor = "green";
+let currentColor = "greenDefault";
 
 function changeColor(color) {
   currentColor = color;
@@ -219,20 +219,56 @@ function toggleMode() {
   });
 }
 
-// Reset Button
+// Counter showing how many squares were highlighted
+let count = 0;
+let squaresColored = [];
+
+function countSquares() {
+  document.querySelectorAll(".square").forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      if (currentColor !== "eraser" && !squaresColored.includes(element)) {
+        element.classList.add("saved");
+        count++;
+        squaresColored.push(element);
+        displayCount();
+      }
+    });
+  });
+}
+
+function displayCount() {
+  document.getElementById("counter").textContent = `Squares Colored: ${count}`;
+}
+
+// Reset Function
 function reset() {
   document.querySelectorAll(".square").forEach((square) => {
     square.classList.remove("saved");
     square.style.backgroundColor = "#fafafa";
   });
+  resetCount();
 }
+// Reset Count function
+function resetCount() {
+  count = 0;
+  squaresColored = [];
+  displayCount();
+  countSquares();
+}
+
+// Update counter when grid size changes
+document.getElementById("small_button").addEventListener("click", resetCount);
+document.getElementById("medium_button").addEventListener("click", resetCount);
+document.getElementById("large_button").addEventListener("click", resetCount);
 
 // Add event listener to reset button to reset the saved squares
 document.getElementById("reset").addEventListener("click", reset);
 
-// Button Effect on Active Click
+// Update counter when reset button is pressed
+document.addEventListener("DOMContentLoaded", countSquares);
+document.getElementById("reset").addEventListener("click", resetCount);
 
-// Counter showing how many squares were highlighted
+// Button Effect on Active Click
 
 // Make it responsive
 
