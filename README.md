@@ -48,7 +48,11 @@ Created README.md file
 * Bug: Found bug in reset dark mode, squares don't save, another bug!
 * Fix: Fixed the bug.
 
+#### Jan 30, 2023
 ### To Do
+* Add: Added feature Eraser mode (simply added the feature as another color option that matched default BG color)
+
+
 Still much to do
 
 Note: Commits were made by @HyunCafe and timestamps were provided in the original prompt to indicate the progression of the project over time.
