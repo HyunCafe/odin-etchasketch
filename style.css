@@ -72,8 +72,11 @@ h3 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: #ffffff;
     font-size: 1.5rem;
-    padding: .2em
-
+    padding: .2em;
+    min-width: 10.5em;
+    max-width: 10.5em;
+    min-height: 1.8em;
+    max-height: 1.8em;
 }
 
 fieldset {

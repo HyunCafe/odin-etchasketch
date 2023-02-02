@@ -291,4 +291,3 @@ document.getElementById("reset").addEventListener("click", resetCount);
 // a new background image for the party mode
 
 // Current Bugs Discovered
-// 1) bug in which upon reset the BG image as well as grid shifts slightly down
