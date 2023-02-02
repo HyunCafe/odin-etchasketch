@@ -289,3 +289,6 @@ document.getElementById("reset").addEventListener("click", resetCount);
 
 // Possibly a party button that has the squares light up in different colors with the bg change periodically or just
 // a new background image for the party mode
+
+// Current Bugs Discovered
+// 1) bug in which upon reset the BG image as well as grid shifts slightly down
