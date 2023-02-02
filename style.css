@@ -29,7 +29,7 @@ h1 {
 
 .Main_Container {
   margin-top: 7em;
-  margin-left: 1.5em;
+  margin-left: 3em;
   margin-right: 7em;
   display: flex;
   flex-wrap: wrap;
@@ -52,8 +52,8 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-  margin-top: 8em;
-  margin-left: 30em;
+  margin-top: 7em;
+  margin-left: 20em;
 }
 h3 {
     font-size: 1.4em;
