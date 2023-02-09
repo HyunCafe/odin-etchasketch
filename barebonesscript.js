@@ -20,36 +20,38 @@ function createLargeGrid() {
   }
 
 // Adjusts the size of each square in the grid.
-const adjustSquareSize = () => {
-  document.querySelectorAll(".square").forEach((square) => {
-    square.style.width = "2%";
-    square.style.height = "2%";
-    square.addEventListener("mouseover", () => {
-      if (!squaresColored.includes(square)) {
-        square.classList.add("saved");
-        count++;
-        squaresColored.push(square);
-        displayCount();
-      }
+function adjustSquareSize() {
+    document.querySelectorAll(".square").forEach((square) => {
+      square.style.width = "2%";
+      square.style.height = "2%";
+      square.addEventListener("mouseover", () => {
+        if (!squaresColored.includes(square)) {
+          square.classList.add("saved");
+          count++;
+          squaresColored.push(square);
+          displayCount();
+        }
+      });
     });
-  });
-};
-
+  }
+  
 // Displays the count of squares colored.
-const displayCount = () => {
-  document.getElementById("counter").innerHTML = `Squares colored: ${count}`;
-};
+function displayCount() {
+    document.getElementById("counter").innerHTML = `Squares colored: ${count}`;
+  };
+  
 
 // Resets the grid and count of squares colored
-const reset = () => {
-  count = 0;
-  squaresColored = [];
-  document.querySelectorAll(".square").forEach((square) => {
-    square.classList.remove("saved");
-    square.style.backgroundColor = "#fafafa";
-  });
-  displayCount();
-};
+function reset() {
+    count = 0;
+    squaresColored = [];
+    document.querySelectorAll(".square").forEach((square) => {
+      square.classList.remove("saved");
+      square.style.backgroundColor = "#fafafa";
+    });
+    displayCount();
+  }
+  
 
 // Listen for the DOMContentLoaded event and call functions to create the grid and count squares
 document.addEventListener("DOMContentLoaded", () => {
