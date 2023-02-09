@@ -277,15 +277,17 @@ document.getElementById("reset").addEventListener("click", resetCount);
 // can click a button that activates a function in which there is a runaway rogue square
 // maybe 3 levels, each level resets with a congrats display when beat and starts at the next stage can use function grid size for this within the function and color change function as well
 // // run away square gets faster (start from small grid to medium to large grid)
-// function minigame() {}
-
-// // Listen for Mini Game Event
-// document.getElementById("minigame").addEventListener("click", function () {
-//   removeExistingGrid();
-//   createSmallGrid();
-//   adjustSquare("small");
-//   changeColor(currentColor);
-// });
+// function minigame() {
+//   // // Listen for Mini Game Event
+//   document.getElementById("minigame").addEventListener("click", function () {
+//     removeExistingGrid();
+//     createSmallGrid();
+//     adjustSquare("small");
+//     reset();
+//     resetCount();
+//     changeColor(currentColor);
+//   });
+// }
 
 // Possibly a party button that has the squares light up in different colors with the bg change periodically or just
 // a new background image for the party mode
