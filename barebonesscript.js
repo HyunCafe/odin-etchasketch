@@ -10,48 +10,39 @@ body.appendChild(container);
 
 // Creates a 50x50 grid of squares.
 function createLargeGrid() {
-    for (let i = 0; i < 50; i++) {
-      for (let j = 0; j < 50; j++) {
-        const squareDiv = document.createElement("div");
-        squareDiv.classList.add("square");
-        container.appendChild(squareDiv);
-      }
+  for (let i = 0; i < 50; i++) {
+    for (let j = 0; j < 50; j++) {
+      const squareDiv = document.createElement("div");
+      squareDiv.classList.add("square");
+      container.appendChild(squareDiv);
     }
   }
+}
 
 // Adjusts the size of each square in the grid.
 function adjustSquareSize() {
-    document.querySelectorAll(".square").forEach((square) => {
-      square.style.width = "2%";
-      square.style.height = "2%";
-      square.addEventListener("mouseover", () => {
-        if (!squaresColored.includes(square)) {
-          square.classList.add("saved");
-          count++;
-          squaresColored.push(square);
-          displayCount();
-        }
-      });
+  document.querySelectorAll(".square").forEach((square) => {
+    square.style.width = "2%";
+    square.style.height = "2%";
+    square.addEventListener("mouseover", () => {
+      if (!squaresColored.includes(square)) {
+        square.classList.add("saved");
+        count++;
+        squaresColored.push(square);
+      }
     });
-  }
-  
-// Displays the count of squares colored.
-function displayCount() {
-    document.getElementById("counter").innerHTML = `Squares colored: ${count}`;
-  };
-  
+  });
+}
 
 // Resets the grid and count of squares colored
 function reset() {
-    count = 0;
-    squaresColored = [];
-    document.querySelectorAll(".square").forEach((square) => {
-      square.classList.remove("saved");
-      square.style.backgroundColor = "#fafafa";
-    });
-    displayCount();
-  }
-  
+  count = 0;
+  squaresColored = [];
+  document.querySelectorAll(".square").forEach((square) => {
+    square.classList.remove("saved");
+    square.style.backgroundColor = "#fafafa";
+  });
+}
 
 // Listen for the DOMContentLoaded event and call functions to create the grid and count squares
 document.addEventListener("DOMContentLoaded", () => {
