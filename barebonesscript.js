@@ -20,29 +20,31 @@ function createLargeGrid() {
 }
 
 // Adjusts the size of each square in the grid.
+const squares = document.querySelectorAll(".square");
 function adjustSquareSize() {
-  document.querySelectorAll(".square").forEach((square) => {
-    square.style.width = "2%";
-    square.style.height = "2%";
-    square.addEventListener("mouseover", () => {
-      if (!squaresColored.includes(square)) {
-        square.classList.add("saved");
-        count++;
-        squaresColored.push(square);
-      }
+    squares.forEach((square) => {
+      square.style.width = "2%";
+      square.style.height = "2%";
+      square.addEventListener("mouseover", () => {
+        if (!squaresColored.includes(square)) {
+          square.classList.add("saved");
+          count++;
+          squaresColored.push(square);
+        }
+      });
     });
-  });
-}
+  }
 
 // Resets the grid and count of squares colored
 function reset() {
   count = 0;
   squaresColored = [];
-  document.querySelectorAll(".square").forEach((square) => {
+  squares.forEach((square) => {
     square.classList.remove("saved");
     square.style.backgroundColor = "#fafafa";
   });
 }
+
 
 // Listen for the DOMContentLoaded event and call functions to create the grid and count squares
 document.addEventListener("DOMContentLoaded", () => {
