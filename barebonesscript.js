@@ -1,45 +1,46 @@
 // Variables to keep track of the count and colored squares
-let count = 0;
-let squaresColored = [];
+let squareCount = 0;
+let coloredSquares = [];
 
 // Get the body element and create a container for the grid
-const body = document.body;
-const container = document.createElement("div");
-container.classList.add("Main_Container");
-body.appendChild(container);
+const bodyElement = document.body;
+const gridContainer = document.createElement("div");
+gridContainer.classList.add("grid-container");
+bodyElement.appendChild(gridContainer);
 
 // Creates a 50x50 grid of squares.
-function createLargeGrid() {
-  for (let i = 0; i < 50; i++) {
-    for (let j = 0; j < 50; j++) {
+function create50x50Grid() {
+  for (let row = 0; row < 50; row++) {
+    for (let col = 0; col < 50; col++) {
       const squareDiv = document.createElement("div");
       squareDiv.classList.add("square");
-      container.appendChild(squareDiv);
+      gridContainer.appendChild(squareDiv);
     }
   }
 }
 
 // Adjusts the size of each square in the grid.
-const squares = document.querySelectorAll(".square");
-function adjustSquareSize() {
-    squares.forEach((square) => {
+const allSquares = document.querySelectorAll(".square");
+function adjustSquareDimensions() {
+    allSquares.forEach((square) => {
       square.style.width = "2%";
       square.style.height = "2%";
+
       square.addEventListener("mouseover", () => {
-        if (!squaresColored.includes(square)) {
+        if (!coloredSquares.includes(square)) {
           square.classList.add("saved");
-          count++;
-          squaresColored.push(square);
+          squareCount++;
+          coloredSquares.push(square);
         }
       });
     });
   }
 
 // Resets the grid and count of squares colored
-function reset() {
-  count = 0;
-  squaresColored = [];
-  squares.forEach((square) => {
+function resetGrid() {
+  squareCount = 0;
+  coloredSquares = [];
+  allSquares.forEach((square) => {
     square.classList.remove("saved");
     square.style.backgroundColor = "#fafafa";
   });
@@ -48,9 +49,13 @@ function reset() {
 
 // Listen for the DOMContentLoaded event and call functions to create the grid and count squares
 document.addEventListener("DOMContentLoaded", () => {
-  createLargeGrid();
-  adjustSquareSize();
+  create50x50Grid();
+  adjustSquareDimensions();
 });
 
+
 // Listen for a click event on the reset button and call the reset function
-document.getElementById("reset").addEventListener("click", reset);
+document.getElementById("reset").addEventListener("click", resetGrid);
+
+
+
