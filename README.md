@@ -13,46 +13,57 @@ Created README.md file
 
 #### Jan 27, 2023
 
-* Added a 16x16 grid divs to the project.
-* Fixed the 16x16 grid.
-* Aligned the divs flush
-* Changed the grid size from 16x16 to 50x50.
-* Added a background.
-* Made borders flush for squares.
+* Initial commit for grid layout project
+* Created 16x16 grid using div elements
+* Corrected grid alignment and made borders flush
+* Upgraded grid size to 50x50
+* Added background color to enhance visual appeal
+* Improved overall visual appearance of the grid layout
 
 #### Jan 28, 2023
 
-* Added different grid choices and ideas 16x16, 30x30, and 50x50
-* Added feature buttons and reset logic choice.
-* Changed the unit of measurement for squares from em to % for squares to fit perfectly with the border.
-* Added save over hover and refactored the if statement to switch statement.
-* Added a reset button and color buttons.
-* Added color gradients, but there was a bug with the reset button.
-* Updated the README.md file.
-* Fixed the bug with reset not applying to color gradients.
-* Added Photoshop background to the dark mode option.
-* Worked on the background image feature for toggle.
-* Added the feature to change the background image on toggle.
-* Refactored the code and made semantic corrections using the HTML validator.
-* Used a CSS validator to ensure all errors were corrected, formatted files with Prettier.
-* Made improvements to the clarity of project steps to enhance user experience.
+* Add grid options: Implement 16x16, 30x30, 50x50 grid choices
+* Add feature buttons and reset logic: Implement reset and color button features
+* Change measurement units: Change from em to % for better border fit of squares
+* Implement hover save: Add save feature for hovering over squares
+* Add color gradients: Implement color gradient options for squares
+* Fix reset button: Correct issue with reset not applying to color gradients
+* Add dark mode option: Implement background image for dark mode toggle
+* Change background image on toggle: Implement toggle feature to change background image
+* Refactor code: Make semantic and code improvements, run HTML and CSS validators
+* Improve project steps: Enhance user experience by clarifying project steps in the README.md file.
 
 #### Jan 29, 2023
-* Fix: Fixed bug regarding color bg reset on dark mode, addressed and resolved the issue.
-* Bug: Found bug, dark mode, square grid on selection bg color changes.
-* Fix: Fixed the bug.
-* Bug: Found another bug, grid select before color, default color doesn't apply.
-* Fix: Fixed bug of reset default being too dark on BG squares.
-* Add: Added some style and flex to buttons for enhanced user experience.
-* Fix: Fixed another bug with saved square on reset for color, resolved.
-* Bug: Found bug in reset dark mode, squares don't save, another bug!
-* Fix: Fixed the bug.
+
+* Resolved issue with reset not properly restoring square colors in dark mode
+* Corrected issue with grid selection impacting square background color
+* Fixed default background color not being applied when grid is selected before color
+* Adjusted styling and added flex to buttons for improved user experience
+* Corrected issue with saved square colors not being reset on color reset
+* Fixed bug where squares were not properly saving in dark mode after reset
 
 #### Jan 30, 2023
 ### To Do
-* Add: Added feature Eraser mode (simply added the feature as another color option that matched default BG color)
-* Add: Added feature Counter (Many bugs arose while implementing this feature, though easy in concept, hard in execution)
+* Feature: Added "Eraser mode" to allow users to erase color in grid squares
+* Feature: Implemented "Counter" functionality to keep track of painted squares, resolved multiple bugs during implementation.
 
-Still much to do
+#### Feb 1, 2023
+* Fix: Resolved the issue with shifting on reset by setting a default minimum size for the counter to 20x20.
+* Bug: Discovered a bug where the image or grid shifts upon page load and during gameplay.
+
+#### Feb 6, 2023
+* Create barebones script for daily blind practice
+
+#### Feb 9, 2023
+* Simplify code: Remove displayCount feature from barebones memorization
+* Improve readability: Convert BBS.js into functions for easier maintenance
+* Test barebones: Add test.js for practicing the barebones script
+
+#### Feb 11, 2023
+* Refactor code: Further simplify the barebones script
+
+#### Feb 12, 2023
+* Enhance readability: Make variables and functions more readable for better understanding.
+
 
 Note: Commits were made by @HyunCafe and timestamps were provided in the original prompt to indicate the progression of the project over time.
