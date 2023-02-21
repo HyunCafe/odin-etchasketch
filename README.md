@@ -1,8 +1,7 @@
 # odin-etchasketch
-This is a project I completed as part of The Odin Project curriculum. It's a browser-based version of the classic Etch-a-Sketch toy, where the user can draw on the screen by moving the cursor with arrow keys or by shaking the device if on a mobile device.
+This is a project I completed as part of The Odin Project curriculum. It's a browser-based version of the classic Etch-a-Sketch toy, where the user can draw on the screen by moving the cursor with arrow keys,
 
 This project showcases my ability to use HTML, CSS, and JavaScript to create interactive web applications. It demonstrates my knowledge of event handling, highlighting DOM manipulation.
-
 
 ![Project Animation](assets/Animation.gif)
 
