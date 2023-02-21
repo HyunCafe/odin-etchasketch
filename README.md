@@ -45,7 +45,6 @@ Created README.md file
 * Fix bug with squares not saving in dark mode after reset
 
 #### Jan 30, 2023
-### To Do
 * Feature: Added "Eraser mode" to allow users to erase color in grid squares
  * Implemented eraser tool to enable users to remove colors from squares
  * Added UI button to activate/deactivate eraser mode
