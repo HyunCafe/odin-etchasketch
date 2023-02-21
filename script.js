@@ -10,7 +10,7 @@ body.appendChild(container);
 // Default size when page loads for grid
 document.addEventListener("DOMContentLoaded", function () {
   createSmallGrid();
-  changeColor("greenDefault");
+  changeColor("orangeDefault");
   adjustSquare("small");
 });
 
@@ -113,7 +113,7 @@ function adjustSquare(size) {
 
 // Different Color Modes: Green Gradient, Studio Ghilbi, Blue Gradient
 const eraser = "#fafafa";
-const greenDefault = "#57C84D";
+const orangeDefault = "#ffa87d";
 const greenColors = [
   "#C5E8B7",
   "#ABE098",
@@ -139,7 +139,7 @@ const blueColors = [
   "#7700b3",
 ];
 
-let currentColor = "greenDefault";
+let currentColor = "orangeDefault";
 
 function changeColor(color) {
   currentColor = color;
@@ -163,7 +163,7 @@ function changeColor(color) {
           element.style.backgroundColor = eraser;
           break;
         default:
-          element.style.backgroundColor = greenDefault;
+          element.style.backgroundColor = orangeDefault;
       }
     });
 

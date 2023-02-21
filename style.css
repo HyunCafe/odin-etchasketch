@@ -2,6 +2,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffa87d;
+  font-weight: 900;
+  text-shadow: 2px 3px 3px #030303;
 }
 
 #body {
@@ -19,10 +23,6 @@ h1 {
   font-size: 2.5em;
   margin: 0 auto;
   position: fixed;
-  font-weight: 900;
-  text-shadow: 0.1rem 0.1rem 0.3rem #2eb62c;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #ffffff;
   border-radius: 1rem;
   border-color: transparent;
 }
@@ -37,61 +37,44 @@ h1 {
   height: 38em;
 }
 
-.square {
-  border: 1px solid black;
-  opacity: 0.6;
-}
-
 ul {
-  list-style: none;
   display: flex;
   flex-direction: column;
 }
 
 .options_container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 7em;
   margin-left: 20em;
 }
-h3 {
-    font-size: 1.4em;
-    font-weight: 900;
-    text-shadow: 0.1rem 0.1rem .1rem #2eb62c;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #ffffff;
-}
 
 #counter {
-    border: 5px solid rgba(255, 255, 255, 0.8);
-    border-radius: 1rem;
-    opacity: 0.9;
-    font-weight: 900;
-    text-shadow: 0.1rem 0.1rem .1rem #2eb62c;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #ffffff;
-    font-size: 1.5rem;
-    padding: .2em;
-    min-width: 10.5em;
-    max-width: 10.5em;
-    min-height: 1.8em;
-    max-height: 1.8em;
+  border: 5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  opacity: 0.9;
+  font-size: 1.5rem;
+  padding: 0.2em;
+  min-width: 10.5em;
+  max-width: 10.5em;
+  min-height: 1.8em;
+  max-height: 1.8em;
 }
 
 fieldset {
-  border-radius: 1rem;
-  border: 5px solid rgba(255, 255, 255, 0.5);
-  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(11.5px);
+  -webkit-backdrop-filter: blur(11.5px);
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.18);
+  margin: 0.2em;
 }
 
 legend {
   text-align: center;
-  font-size: 1.2rem;
-  font-weight: 900;
-  text-shadow: 0.1rem 0.1rem 0.3rem #2eb62c;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #ffffff;
+  font-size: 1.4rem;
 }
 
 li {
@@ -104,15 +87,9 @@ button {
   padding: 0.25em;
   margin: 0.5em;
   font-size: 1rem;
-  font-weight: 900;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #ffffff;
-  border-radius: 1rem;
-  border: 3px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.4);
   border-radius: 8px;
   backdrop-filter: blur(22px);
-  background-color: rgba(255, 255, 255, 1);
-  text-shadow: 0.2rem 0.1rem 0.3rem #2eb62c;
 }
 
 button:hover {
