@@ -146,7 +146,7 @@ function changeColor(color) {
   document.querySelectorAll(".square").forEach((element) => {
     element.addEventListener("mouseover", () => {
       switch (currentColor) {
-        case "green":
+        case "orange":
           element.style.backgroundColor =
             greenColors[Math.floor(Math.random() * greenColors.length)];
           break;
@@ -180,8 +180,8 @@ function changeColor(color) {
 // Updates mode variable when a color button is clicked
 function changeMode(mode) {
   switch (mode) {
-    case "green":
-      currentMode = "green";
+    case "orange":
+      currentMode = "orange";
       break;
     case "ghilbi":
       currentMode = "ghilbi";
@@ -201,12 +201,12 @@ function toggleMode() {
   // Feature change background image with toggle click
   if (body.classList.contains("dark-mode")) {
     body.style.backgroundImage = "url('assets/bgDarkMode.jpg')";
-    body.style.backgroundPosition = "center";
     body.style.backgroundSize = "cover";
+    body.style.backgroundRepeat = "no-repeat";
   } else {
     body.style.backgroundImage = "url('assets/bg.jpg')";
-    body.style.backgroundPosition = "center";
     body.style.backgroundSize = "cover";
+    body.style.backgroundRepeat = "no-repeat";
   }
   // Add event listener to save over hover when in dark mode
   document.querySelectorAll(".square").forEach((square) => {
