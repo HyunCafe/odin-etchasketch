@@ -1,7 +1,13 @@
 # odin-etchasketch
-This is a project I completed as part of The Odin Project curriculum. It's a browser-based version of the classic Etch-a-Sketch toy, where the user can draw on the screen by moving the cursor with arrow keys,
+My Etch A Sketch web app allows users to draw and create various artworks on a grid. It offers several unique key features, such as the ability to count and color the squares, without recounting already-colored ones. The app offers three different grid sizes to choose from, and three coloring modes, including an eraser mode for erasing previous drawings. Additionally, a reset button is available to clear the entire grid. The app also features a dark mode that gives the entirely new theme with the grid having a glowing look, all packaged in an aesthetically pleasing color scheme.
 
-This project showcases my ability to use HTML, CSS, and JavaScript to create interactive web applications. It demonstrates my knowledge of event handling, highlighting DOM manipulation.
+
+## Summary of Key Features:
+* Counting colored block square mode that won't recount squares previously colored
+* Three different grid sizes to choose from
+* Three different color modes and an eraser mode
+* Reset button to clear the grid and start over
+* Dark mode that changes the theme and includes a glowing grid for a visually pleasing experience.
 
 ![Project Animation](assets/Animation.gif)
 
