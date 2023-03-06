@@ -5,7 +5,7 @@ const body = document.body;
 // Create a new <div> element
 const container = document.createElement("div");
 container.classList.add("Main_Container");
-body.appendChild(container);
+body.append(container);
 
 // Default size when page loads for grid
 document.addEventListener("DOMContentLoaded", function () {
@@ -54,7 +54,7 @@ function createSmallGrid() {
     for (let j = 0; j < 16; j++) {
       const squareDiv = document.createElement("div");
       squareDiv.classList.add("square");
-      container.appendChild(squareDiv);
+      container.append(squareDiv);
     }
   }
 }
@@ -65,7 +65,7 @@ function createMediumGrid() {
     for (let j = 0; j < 30; j++) {
       const squareDiv = document.createElement("div");
       squareDiv.classList.add("square");
-      container.appendChild(squareDiv);
+      container.append(squareDiv);
     }
   }
 }
@@ -76,7 +76,7 @@ function createLargeGrid() {
     for (let j = 0; j < 50; j++) {
       const squareDiv = document.createElement("div");
       squareDiv.classList.add("square");
-      container.appendChild(squareDiv);
+      container.append(squareDiv);
     }
   }
 }
