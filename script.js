@@ -15,9 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Grid Options: Small, Medium, Large
-const smallButton = document.getElementById("small_button");
-const mediumButton = document.getElementById("medium_button");
-const largeButton = document.getElementById("large_button");
+const smallButton = document.getElementById("small-button");
+const mediumButton = document.getElementById("medium-button");
+const largeButton = document.getElementById("large-button");
 
 // Event Listener for Button Click that change on user choice / reset old grid
 smallButton.addEventListener("click", function () {
@@ -174,6 +174,57 @@ function changeColor(color) {
     element.addEventListener("mouseover", () => {
       element.dataset.savedColor = element.style.backgroundColor;
     });
+
+    // Add touch events
+    element.addEventListener("touchstart", () => {
+      switch (currentColor) {
+        case "orange":
+          element.style.backgroundColor =
+            greenColors[Math.floor(Math.random() * greenColors.length)];
+          break;
+        case "ghilbi":
+          element.style.backgroundColor =
+            ghilbiColors[Math.floor(Math.random() * ghilbiColors.length)];
+          break;
+        case "blue":
+          element.style.backgroundColor =
+            blueColors[Math.floor(Math.random() * blueColors.length)];
+          break;
+        //  Eraser mode
+        case "eraser":
+          element.style.backgroundColor = eraser;
+          break;
+        default:
+          element.style.backgroundColor = orangeDefault;
+      }
+    });
+
+    element.addEventListener("touchend", () => {
+      element.style.backgroundColor = element.dataset.savedColor;
+    });
+
+    element.addEventListener("touchmove", () => {
+      switch (currentColor) {
+        case "orange":
+          element.style.backgroundColor =
+            greenColors[Math.floor(Math.random() * greenColors.length)];
+          break;
+        case "ghilbi":
+          element.style.backgroundColor =
+            ghilbiColors[Math.floor(Math.random() * ghilbiColors.length)];
+          break;
+        case "blue":
+          element.style.backgroundColor =
+            blueColors[Math.floor(Math.random() * blueColors.length)];
+          break;
+        //  Eraser mode
+        case "eraser":
+          element.style.backgroundColor = eraser;
+          break;
+        default:
+          element.style.backgroundColor = orangeDefault;
+      }
+    });
   });
 }
 
@@ -256,9 +307,9 @@ function resetCount() {
 }
 
 // Update counter when grid size changes
-document.getElementById("small_button").addEventListener("click", resetCount);
-document.getElementById("medium_button").addEventListener("click", resetCount);
-document.getElementById("large_button").addEventListener("click", resetCount);
+document.getElementById("small-button").addEventListener("click", resetCount);
+document.getElementById("medium-button").addEventListener("click", resetCount);
+document.getElementById("large-button").addEventListener("click", resetCount);
 
 // Add event listener to reset button to reset the saved squares
 document.getElementById("reset").addEventListener("click", reset);
