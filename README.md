@@ -8,8 +8,12 @@ My Etch A Sketch web app allows users to draw and create various artworks on a g
 * Three different color modes and an eraser mode
 * Reset button to clear the grid and start over
 * Dark mode that changes the theme and includes a glowing grid for a visually pleasing experience.
+* Responsive Design with Breakpoints
 
 ![Project Animation](assets/Animation.gif)
+
+## TODO:
+* Add a fun minigame Mode
 
 ## Project Timeline
 
@@ -80,3 +84,7 @@ Created README.md file
 * Refactor: Removed unused assets to improve performance
 * Style: Improved aesthetics of UI with new design
 * Style: Finalized light and dark mode styling for better accessibility
+
+#### March 25, 2023
+* Add: Refactor code to be responsive 
+* Feat: Added touch feature for the etch a sketch
