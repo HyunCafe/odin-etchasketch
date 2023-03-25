@@ -1,4 +1,4 @@
-# odin-etchasketch
+# odin-etchasketch (6 weeks into my coding journey)
 My Etch A Sketch web app allows users to draw and create various artworks on a grid. It offers several unique key features, such as the ability to count and color the squares, without recounting already-colored ones. The app offers three different grid sizes to choose from, and three coloring modes, including an eraser mode for erasing previous drawings. Additionally, a reset button is available to clear the entire grid. The app also features a dark mode that gives the entirely new theme with the grid having a glowing look, all packaged in an aesthetically pleasing color scheme.
 
 
