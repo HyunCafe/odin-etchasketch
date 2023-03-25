@@ -6,7 +6,8 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: #ffa87d;
   font-weight: 900;
-  text-shadow: 2px 3px 3px #030303;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 2px #030303;
 }
 
 #body {
@@ -59,8 +60,8 @@ ul {
   opacity: 0.9;
   font-size: 1.5rem;
   padding: 0.2em;
-  min-width: 10.5em;
-  max-width: 10.5em;
+  min-width: 12em;
+  max-width: 12em;
   min-height: 1.8em;
   max-height: 1.8em;
   background: rgba(255, 255, 255, 0.3);
