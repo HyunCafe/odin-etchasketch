@@ -283,6 +283,23 @@ function countSquares() {
         displayCount();
       }
     });
+    element.addEventListener("touchstart", () => {
+      if (currentColor !== "eraser" && !squaresColored.includes(element)) {
+        element.classList.add("saved");
+        count++;
+        squaresColored.push(element);
+        displayCount();
+      }
+    });
+    element.addEventListener("touchmove", (e) => {
+      e.preventDefault();
+      if (currentColor !== "eraser" && !squaresColored.includes(element)) {
+        element.classList.add("saved");
+        count++;
+        squaresColored.push(element);
+        displayCount();
+      }
+    });
   });
 }
 

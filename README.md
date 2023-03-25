@@ -88,3 +88,4 @@ Created README.md file
 #### March 25, 2023
 * Add: Refactor code to be responsive 
 * Feat: Added touch feature for the etch a sketch
+* Feat: Added Count feature to work with touch
