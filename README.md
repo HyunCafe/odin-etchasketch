@@ -11,6 +11,10 @@ My Etch A Sketch web app allows users to draw and create various artworks on a g
 * Responsive Design with Breakpoints
 
 ![Project Animation](assets/Animation.gif)
+<p align="center">
+<a href="https://hyuncafe.github.io/odin-etchasketch/" target="_blank">Live Link</a>
+</p>
+
 
 ## TODO:
 * Add a fun minigame Mode
