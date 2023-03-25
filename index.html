@@ -13,61 +13,98 @@
   </head>
 
   <body id="body" class="light-mode">
-    <h1>Etch-a-Sketch</h1>
+    <h1 class="heading">Etch-a-Sketch</h1>
 
+    
     <div class="options_container">
-      <h3>Blocks Colored</h3>
-      <p id="counter"></p>
-      <fieldset>
-        <legend>Grid Size</legend>
-        <ul class="grid_button_container">
+      <h3 class="options-container__heading">Blocks Colored</h3>
+      <p class="options-container__counter" id="counter"></p>
+      <fieldset class="options-container__fieldset">
+        <legend class="options-container__legend">Grid Size</legend>
+        <ul class="grid-button-container">
           <li>
-            <button id="small_button" onclick="adjustSquare('small')">
+            <button
+              class="grid-button-container__button"
+              id="small-button"
+              onclick="adjustSquare('small')"
+            >
               Small
             </button>
           </li>
           <li>
-            <button id="medium_button" onclick="adjustSquare('medium')">
+            <button
+              class="grid-button-container__button"
+              id="medium-button"
+              onclick="adjustSquare('medium')"
+            >
               Medium
             </button>
           </li>
           <li>
-            <button id="large_button" onclick="adjustSquare('large')">
+            <button
+              class="grid-button-container__button"
+              id="large-button"
+              onclick="adjustSquare('large')"
+            >
               Large
             </button>
           </li>
         </ul>
       </fieldset>
 
-      <fieldset>
-        <legend>Color Options</legend>
-        <ul class="color_button_container">
+      <fieldset class="options-container__fieldset">
+        <legend class="options-container__legend">Color Options</legend>
+        <ul class="color-button-container">
           <li>
-            <button id="default" onclick="changeColor('orange')">
-              Green Gradient
+            <button
+              class="color-button-container__button"
+              id="default"
+              onclick="changeColor('orange')"
+            >
+              Default
             </button>
           </li>
           <li>
-            <button id="studio_ghilbi" onclick="changeColor('ghilbi')">
+            <button
+              class="color-button-container__button"
+              id="studio-ghilbi"
+              onclick="changeColor('ghilbi')"
+            >
               Studio Ghilbi
             </button>
           </li>
           <li>
-            <button id="blue_gradient" onclick="changeColor('blue')">
+            <button
+              class="color-button-container__button"
+              id="blue-gradient"
+              onclick="changeColor('blue')"
+            >
               Blue Gradient
             </button>
           </li>
           <li>
-            <button id="eraser_mode" onclick="changeColor('eraser')">
+            <button
+              class="color-button-container__button"
+              id="eraser-mode"
+              onclick="changeColor('eraser')"
+            >
               Eraser
             </button>
           </li>
         </ul>
       </fieldset>
-      <fieldset>
-        <button id="toggle_btn" onclick="toggleMode()">Dark Mode</button>
-        <button id="minigame">MiniGame</button>
-        <button id="reset">Reset</button>
+      <fieldset class="options-container__fieldset">
+        <button
+          class="options-container__toggle-btn"
+          id="toggle-btn"
+          onclick="toggleMode()"
+        >
+          Dark Mode
+        </button>
+        <button class="options-container__minigame-btn" id="minigame">
+          MiniGame
+        </button>
+        <button class="options-container__reset-btn" id="reset">Reset</button>
       </fieldset>
     </div>
     <script src="script.js"></script>
