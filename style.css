@@ -105,7 +105,8 @@ button:hover {
   background-color: #ffa87d;
   border-color: #ffa87d;
   transform: scale(1.1);
-  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 button:active {
@@ -113,7 +114,8 @@ button:active {
   border-color: #ffa87d;
   box-shadow: 0px 0px 5px rgba(217, 72, 72, 0.5);
   transform: scale(0.95);
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 
 /* Dark Mode */
@@ -196,7 +198,6 @@ button:active {
   .options_container {
     display: flex;
     flex-direction: column;
-    border: 2px red solid;
     align-items: center;
     margin-top: 5em;
     margin-left: 0em;
@@ -204,6 +205,12 @@ button:active {
 
   .options-container__heading {
     font-size: 1.5rem;
+  }
+
+  .options-container__counter {
+    min-height: 8%;
+    min-width: 77%;
+    font-size: 1.3rem;
   }
 }
 
