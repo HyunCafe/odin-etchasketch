@@ -173,6 +173,17 @@ button:active {
 }
 
 /* Responsive add Media Queries need Testing */
+@media screen and (max-width: 1450px) {
+  h1 {  
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 32px 0 rgb(0, 0, 0);
+    backdrop-filter: blur(11.5px);
+    -webkit-backdrop-filter: blur(11.5px);
+    padding: .2em;
+  
+  }
+}
+
 @media screen and (max-width: 1250px) {
   * {
     font-size: 80%;
@@ -227,6 +238,11 @@ button:active {
     width: 70%;
     height: 70vw;
   }
+
+  .options_container {
+    width: 60%;
+  }
+
 }
 
 @media screen and (max-width: 450px) {
